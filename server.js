@@ -2,21 +2,11 @@ import express from 'express';
 import bcrypt from 'bcrypt-nodejs';
 import cors from 'cors';
 import knex from 'knex';
-//const express = require('express');
-//const bcrypt = require('bcrypt-nodejs');
-
-// const cors = require('cors');
-// const knex = require('knex');
 
 import { handleRegister } from './controllers/register.js';
 import { handleSignin } from './controllers/signin.js';
 import { handleProfileGet } from './controllers/profile.js';
 import { handleImage, HandleApiCall } from './controllers/image.js';
-
-// const register = require('./controllers/register');
-// const signin = require('./controllers/signin')
-// const profile = require('./controllers/profile');
-// const image = require('./controllers/image');
 
 const app = express();
 

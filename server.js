@@ -10,13 +10,29 @@ import { handleImage, HandleApiCall } from './controllers/image.js';
 
 const app = express();
 
+//localhost//
+// const db = knex({
+//     client: 'pg',
+//     connection: {
+//         host: '127.0.0.1',
+//         user: 'postgres',
+//         password: 'test',
+//         database: 'smart-brain'
+//     }
+// });
+
+
+//external database//
 const db = knex({
     client: 'pg',
     connection: {
-        host: '127.0.0.1',
-        user: 'postgres',
-        password: 'test',
-        database: 'smart-brain'
+        connectionString: 'postgres://smart_brain_p4i6_user:rbOF9Y26ervBsZFlqcdBgDTVkYnc1OQA@dpg-cj9k92qvvtos73evk6mg-a.oregon-postgres.render.com/smart_brain_p4i6',
+        host: 'dpg-cj9k92qvvtos73evk6mg-a',
+        port: 5432,
+        user: 'smart_brain_p4i6_user',
+        database: 'smart_brain_p4i6',
+        password: 'rbOF9Y26ervBsZFlqcdBgDTVkYnc1OQA',
+        ssl: true,
     }
 });
 

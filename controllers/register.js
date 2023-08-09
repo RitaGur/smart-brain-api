@@ -1,5 +1,9 @@
 export const handleRegister = (request, response, db, bcrypt) => {
     const { email, name, password } = request.body;
+    console.log(email);
+    console.log(name);
+    console.log(password);
+
     if (!email || !name || !password) {
         return response.status(400).json('incorrect form submission');
     }
